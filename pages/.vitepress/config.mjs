@@ -4,41 +4,28 @@ import { version } from '../../package.json'
 
 
 export default defineConfig({
-    lang: "en-UK",
+    lang: "en",
 
     // common meta(head) tags
     head: [
-
-        ['link', { rel: 'icon', href: 'https://docs.indiacompliance.app/favicon.ico' }],
+        // reform
+        ['link', { rel: 'icon', href: 'github_pages_url/logo.png' }],
 
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-        ['meta', { name: 'author', content: 'Resilient Tech' }],
-        ['meta', { name: 'keywords', content: 'India Compliance, Resilient Tech, ERP, ERPNext, Frappe, GSTR2A/2B, Reconciliation Tool, e-Invoice, e-Waybill, GST, India' }],
+        ['meta', { name: 'author', content: 'Improwised Technologies Pvt. Ltd.' }],
+        ['meta', { name: 'keywords', content: 'ERPNext-Projects-Plus, Improwised Technologies Pvt. Ltd., ERP, ERPNext, Frappe, GitHub' }],
         ['meta', { name: 'robots', content: 'index, follow' }],
-        ['meta', { name: 'copyright', content: 'Copyright © 2024, Resilient Tech' }],
-        ['meta', { name: 'revisit-after', content: '7 days' }],
-        
+        ['meta', { name: 'copyright', content: 'Copyright © 2024, Improwised Technologies Pvt. Ltd.' }],
         ['meta', { name: 'og:type', content: 'website' }],
-        ['meta', { name: 'og:image', property: 'og:image', content: 'https://docs.indiacompliance.app/assets/OG-Share.jpg' }],
-        ['meta', { name: 'og:image:alt', content: 'India Compliance Logo' }],
-        ['meta', { name: 'og:image:width', content: '1200' }],
-        ['meta', { name: 'og:image:height', content: '675' }],
-
-        ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-        ['meta', { name: 'twitter:image', content: 'https://docs.indiacompliance.app/assets/OG-Share.jpg' }],
-        // NOTE  : It converts <HOST>/docs/configuration/assets to <HOST>/assets
-        ['meta', { name: 'twitter:image:alt', content: 'India Compliance Logo' }],
-        ['meta', { name: 'twitter:image:width', content: '1200' }],
-        ['meta', { name: 'twitter:image:height', content: '675' }],
-
+        ['meta', { name: 'og:url', content: 'https://www.improwised.com/' }],
     ],
 
 
     // index page meta(head) tags
-    title: "India Compliance",
-    description: "Documentation and User Guide for India Compliance App",
-    og_title:"India Compliance",
-    og_url:"https://docs.indiacompliance.app/",
+    title: "ERPNext-Projects-Plus",
+    description: "Documentation and User Guide for ERPNext-Projects-Plus App",
+    og_title: "ERPNext-Projects-Plus",
+    og_url: "github_pages_url",// reform
 
     ignoreDeadLinks: true,
     lastUpdated: true,
@@ -51,90 +38,62 @@ export default defineConfig({
             ['meta',
                 {
                     name: 'og:title',
-                    content: `${pageData?.frontmatter?.og_title ? pageData.frontmatter.og_title : "India Compliance"}`
+                    content: `${pageData?.frontmatter?.og_title ? pageData.frontmatter.og_title : "ERPNext-Projects-Plus"}`
                 }
             ],
             ['meta',
                 {
                     name: 'og:description',
-                    content: `${pageData?.description ? pageData.description : "Documentation and User Guide for India Compliance App"}`
+                    content: `${pageData?.description ? pageData.description : "Documentation and User Guide for ERPNext-Projects-Plus App"}`
                 }
             ],
             ['meta',
                 {
                     name: 'og:url',
-                    content: `${pageData?.frontmatter?.og_url ? pageData.frontmatter.og_url : "https://docs.indiacompliance.app/"}`
+                    content: `${pageData?.frontmatter?.og_url ? pageData.frontmatter.og_url : "github_pages_url"}`// reform
                 }
-            ],
-            ['meta',
-                {
-                    name: 'twitter:title',
-                    content: `${pageData?.frontmatter?.og_title ? pageData.frontmatter.og_title : "India Compliance"}`
-                }
-            ],
-            ['meta',
-                {
-                    name: 'twitter:description',
-                    content: `${pageData?.description ? pageData.description : "Documentation and User Guide for India Compliance App"}`
-                }
-            ],
-            ['meta',
-                {
-                    name: 'twitter:url',
-                    content: `${pageData?.frontmatter?.og_url ? pageData.frontmatter.og_url : "https://docs.indiacompliance.app/"}`
-                }
-            ],
+            ]
         )
     },
 
     sitemap: {
-        hostname: 'https://docs.indiacompliance.app/',
+        hostname: 'github_pages_url',// reform
         lastmodDateOnly: false
     },
 
     themeConfig: {
         editLink: {
             pattern:
-                "https://github.com/resilient-tech/india-compliance-docs/edit/main/pages/:path",
+                "https://github.com/Improwised/ERPNext-projects-plus/edit/documentation/pages/:path", // reform
             text: "Edit this page on GitHub",
         },
 
         socialLinks: [
             {
                 icon: "github",
-                link: "https://github.com/resilient-tech/india-compliance/",
+                link: "https://github.com/Improwised/ERPNext-projects-plus",
             },
         ],
 
         footer: {
-            message: "<a href=https://www.resilient.tech/> Powered by Resilient Tech <a> ",
+            message: "<a href=https://www.improwised.com/> Powered by Improwised Technologies Pvt. Ltd. <a> ",
             copyright: "Copyright © 2024",
-        },
-
-        comment: {
-            repo: 'resilient-tech/india-compliance',
-            themes: 'github-light',
-            issueTerm: 'pathname'
         },
 
         nav: nav(),
 
         sidebar: {
             "/docs/": sidebarDocs(),
+            "/docs/v14.0.x/": sidebarDocsv140x(),
         },
 
         blog: {
-            title: 'India Compliance Blog',
-            description: 'Exploring implementation strategies for India',
+            title: 'ERPNext-Projects-Plus Blog',
+            description: 'Smart integration of ERPNext projects with Github',
         },
 
         search: {
-            provider: "algolia",
-            options: {
-                appId: "RFULW5EJJD",
-                apiKey: "1037e3c97bcd3fc44e18ce6ddcac5965",
-                indexName: "indiacompliance"
-            }
+            provider: "local",
         }
 
     },
@@ -152,17 +111,27 @@ export default defineConfig({
 
 })
 
+// reform
 function nav() {
     return [
         {
             text: "Docs",
-            link: "/docs/getting-started/introduction",
+            link: "/docs/v14.0.x/index",
             activeMatch: "/docs/",
+        },
+        {
+            text: 'Version',
+            items: [
+                { text: 'v14.0.x', link: '/docs/v14.0.x/getting-started/introduction' },
+                { text: 'v0.2.x', link: '/docs/v0.2.x/index' },
+                { text: 'Item C', link: '/item-3' }
+            ]
         },
         { text: "Blog", link: "blog/index", activeMatch: "/blog/" }
     ];
 }
 
+// reform
 function sidebarDocs() {
     return [
         {
@@ -171,7 +140,7 @@ function sidebarDocs() {
             items: [
                 { text: "Introduction", link: "/docs/getting-started/introduction" },
                 { text: "Installation", link: "/docs/getting-started/installation" },
-                { text: "India Compliance Account", link: "/docs/getting-started/india_compliance_account" }
+                { text: "ERPNext-Projects-Plus Account", link: "/docs/getting-started/india_compliance_account" }
 
             ]
         },
@@ -229,5 +198,39 @@ function sidebarDocs() {
             ]
         },
 
+    ];
+}
+
+function sidebarDocsv140x() {
+    return [
+        {
+            text: "Getting Started",
+            collapsible: true,
+            items: [
+                { text: "Introduction", link: "/docs/v14.0.x/getting-started/introduction" },
+                { text: "Authorization", link: "/docs/v14.0.x/getting-started/github_credential" },
+                { text: "Projects and Tasks", link: "/docs/v14.0.x/getting-started/project_and_task" },
+                { text: "Commit", link: "/docs/v14.0.x/getting-started/commit" },
+                { text: "Pull Request", link: "/docs/v14.0.x/getting-started/pull_request" }
+
+            ]
+        },
+        {
+            text: "Github Credential",
+            collapsible: true,
+            items: [
+                { text: "Create Github App", link: "/docs/v14.0.x/github-credential/create_app" },
+            ]
+        },
+        {
+            text: "Extras",
+            collapsible: true,
+            items: [
+                { text: "Custom Task Closing Configuration", link: "/docs/v14.0.x/commit/custom_closing_config" },
+                { text: "Github User", link: "/docs/v14.0.x/commit/github_user" },
+                { text: "Permission", link: "/docs/v14.0.x/permission/permission" },
+                { text: "Server Down Scenario", link: "/docs/v14.0.x/server-down/server-down" }
+            ]
+        },
     ];
 }

@@ -1,28 +1,28 @@
 ---
 layout: home
 
-title: India Compliance
-titleTemplate: Simple, yet powerful compliance solutions for Indian businesses
+title: ERPNext-Projects-Plus
+titleTemplate: Smart integration of ERPNext projects with Github
 
 hero:
-    name: India Compliance
+    name: ERPNext-Projects-Plus
     text: Documentation and User Guide
-    tagline: Simple, yet powerful compliance solutions for Indian businesses
+    tagline: Smart integration of ERPNext projects with Github
     actions:
         - theme: brand
           text: Get Started
           link: /docs/getting-started/introduction
         - theme: alt
           text: View on GitHub
-          link: https://github.com/resilient-tech/india-compliance/
+          link: https://github.com/Improwised/ERPNext-projects-plus
 
 features:
     - title: Open Source
-      details: We <3 Open Source. An app build on core Open Source values so you can trust
-    - title: Integrated with GST
-      details: App Integrated with all GST Features, making compliance easy and fun
-    - title: Powerful Validations
-      details: Validations that ensure you cannot go wrong with your compliance
-    - title: Fully Configurable Settings
-      details: Settings that allow you to customize compliance to your requirements
+      details: We are Open Source. An app built on core open-source values so you can trust
+    - title: Integrated with Github
+      details: App Integrated with Github, So you can authorize your organization and track Commits and Pull Request for Tasks
+    - title: Automation at hand
+      details: Update Task timings according to the last Commits and Pull the Request
+    - title: Powerful User Experience
+      details: View that allows you to easily access details from Task
 ---

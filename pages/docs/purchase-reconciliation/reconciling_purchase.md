@@ -1,21 +1,3 @@
----
-description: Explore ERPNext's Advanced Purchase Reconciliation Tool, streamlining GST purchase reconciliation. Share insightful mismatch reports with vendors for accurate records and compliance.
-
-og_title : Advanced Purchase Reconciliation Tool
-og_url : https://docs.indiacompliance.app/docs/purchase-reconciliation/reconciling_purchase
-
-structured_data:
-  - "@context": "https://schema.org"
-    "@type": "WebPage"
-    name: "Advanced Purchase Reconciliation Tool - ERPNext Documentation"
-    description: "Explore ERPNext's Advanced Purchase Reconciliation Tool, streamlining GST purchase reconciliation. Share insightful mismatch reports with vendors for accurate records and compliance."
-
-    mainEntityOfPage:
-      "@type": "WebPage"
-      "@id": "https://docs.indiacompliance.app/docs/purchase-reconciliation/reconciling_purchase"
----
-
-
 # Advanced Purchase Reconciliation Tool
 
 As per GST laws, a business is required to file GSTR-3B after taking into consideration the input tax credit available as per GSTR-2B. 
