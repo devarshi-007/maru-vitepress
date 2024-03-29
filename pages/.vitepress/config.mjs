@@ -56,11 +56,6 @@ export default defineConfig({
         )
     },
 
-    sitemap: {
-        hostname: 'github_pages_url',// reform
-        lastmodDateOnly: false
-    },
-
     themeConfig: {
         lastUpdated: {
             text: 'Updated at',
