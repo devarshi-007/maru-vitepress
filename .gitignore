@@ -1,0 +1,20 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+erpnext_projects_plus/docs/current
+node_modules/
+dist/
+
+# dev container
+.devcontainer/.env
+node_modules
+package-lock.json
+
+# vitepress
+/dist
+pages/.vitepress/dist
+
+# vitepress cache
+pages/.vitepress/cache

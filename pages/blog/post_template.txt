@@ -1,0 +1,14 @@
+---
+date: 2024-03-29
+title: [title]
+category: [turorial/article/document]
+author: [author-name]
+description: [Long description should be indented otherwise error will be raised]
+tags:
+- tags
+---
+<PostDetail>
+Content inside the tags
+shouldn't start with h1/#
+
+</PostDetail>
