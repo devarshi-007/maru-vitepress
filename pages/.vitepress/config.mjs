@@ -5,7 +5,7 @@ import { version } from '../../package.json'
 
 export default defineConfig({
     lang: "en",
-    base: "/ERPNext-projects-plus/",
+    base: "/maru-vitepress/",
     // common meta(head) tags
     head: [
         // reform
