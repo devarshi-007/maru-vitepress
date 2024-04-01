@@ -11,7 +11,7 @@ hero:
     actions:
         - theme: brand
           text: Get Started
-          link: /docs/getting-started/introduction
+          link: /docs/v14.0.x/getting-started/introduction
         - theme: alt
           text: View on GitHub
           link: https://github.com/Improwised/ERPNext-projects-plus
