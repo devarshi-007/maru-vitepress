@@ -127,7 +127,7 @@ function nav() {
             text: 'Version',
             items: [
                 { text: 'v14.0.x', link: '/docs/v14.0.x/getting-started/introduction' },
-                { text: 'v0.2.x', link: '/docs/v0.2.x/index' }
+                { text: 'v0.2.x', link: '/docs/v0.2.x/getting-started/introduction' }
             ]
         },
         { text: "Blog", link: "blog/index", activeMatch: "/blog/" }
@@ -170,6 +170,34 @@ function sidebarDocsv140x() {
 
 function sidebarDocsv02x() {
     return [
+        {
+            text: "Getting Started",
+            collapsible: true,
+            items: [
+                { text: "Introduction", link: "/docs/v0.2.x/getting-started/introduction" },
+                { text: "Authorization", link: "/docs/v0.2.x/getting-started/github_credential" },
+                { text: "Projects and Tasks", link: "/docs/v0.2.x/getting-started/project_and_task" },
+                { text: "Commit", link: "/docs/v0.2.x/getting-started/commit" },
+                { text: "Pull Request", link: "/docs/v0.2.x/getting-started/pull_request" }
 
+            ]
+        },
+        {
+            text: "Github Credential",
+            collapsible: true,
+            items: [
+                { text: "Create Github App", link: "/docs/v0.2.x/github-credential/create_app" },
+            ]
+        },
+        {
+            text: "Extras",
+            collapsible: true,
+            items: [
+                { text: "Custom Task Closing Configuration", link: "/docs/v0.2.x/commit/custom_closing_config" },
+                { text: "Github User", link: "/docs/v0.2.x/commit/github_user" },
+                { text: "Permission", link: "/docs/v0.2.x/permission/permission" },
+                { text: "Server Down Scenario", link: "/docs/v0.2.x/server-down/server-down" }
+            ]
+        },
     ];
 }
