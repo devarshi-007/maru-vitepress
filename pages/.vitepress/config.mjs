@@ -9,7 +9,7 @@ export default defineConfig({
     // common meta(head) tags
     head: [
         // reform
-        ['link', { rel: 'icon', href: 'github_pages_url/logo.png' }],
+        ['link', { rel: 'icon', href: '/logo.png' }],
 
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['meta', { name: 'author', content: 'Improwised Technologies Pvt. Ltd.' }],
@@ -56,12 +56,15 @@ export default defineConfig({
         )
     },
 
-    sitemap: {
-        hostname: 'github_pages_url',// reform
-        lastmodDateOnly: false
-    },
-
     themeConfig: {
+        lastUpdated: {
+            text: 'Updated at',
+            formatOptions: {
+              dateStyle: 'medium',
+              timeStyle: 'short'
+            }
+        },
+
         editLink: {
             pattern:
                 "https://github.com/Improwised/ERPNext-projects-plus/edit/documentation/pages/:path", // reform
@@ -83,7 +86,7 @@ export default defineConfig({
         nav: nav(),
 
         sidebar: {
-            "/docs/": sidebarDocs(),
+            "/docs/v0.2.x/": sidebarDocsv02x(),
             "/docs/v14.0.x/": sidebarDocsv140x(),
         },
 
@@ -116,88 +119,17 @@ function nav() {
     return [
         {
             text: "Docs",
-            link: "/docs/v14.0.x/index",
+            link: "/docs/v14.0.x/getting-started/introduction",
             activeMatch: "/docs/",
         },
         {
             text: 'Version',
             items: [
                 { text: 'v14.0.x', link: '/docs/v14.0.x/getting-started/introduction' },
-                { text: 'v0.2.x', link: '/docs/v0.2.x/index' },
-                { text: 'Item C', link: '/item-3' }
+                { text: 'v0.2.x', link: '/docs/v0.2.x/getting-started/introduction' }
             ]
         },
         { text: "Blog", link: "blog/index", activeMatch: "/blog/" }
-    ];
-}
-
-// reform
-function sidebarDocs() {
-    return [
-        {
-            text: "Getting Started",
-            collapsible: true,
-            items: [
-                { text: "Introduction", link: "/docs/getting-started/introduction" },
-                { text: "Installation", link: "/docs/getting-started/installation" },
-                { text: "ERPNext-Projects-Plus Account", link: "/docs/getting-started/india_compliance_account" }
-
-            ]
-        },
-        {
-            text: "Configuration",
-            collapsible: true,
-            items: [
-                { text: "Setting Up", link: "/docs/configuration/gst_setup" },
-                { text: "Sales Transaction", link: "/docs/configuration/sales_transaction" },
-                { text: "Purchase Transaction", link: "/docs/configuration/purchase_transaction" },
-                { text: "TDS Configuration", link: "/docs/configuration/tds_configuration" },
-                { text: "Other Transaction", link: "/docs/configuration/other_transaction" },
-            ]
-        },
-        {
-            text: "e-Waybill And e-Invoice",
-            collapsible: true,
-            items: [
-                { text: "Setting Up", link: "/docs/ewaybill-and-einvoice/gst_settings" },
-                { text: "Generating e-Waybill", link: "/docs/ewaybill-and-einvoice/generating_e_waybill" },
-                { text: "Generating e-Invoice", link: "/docs/ewaybill-and-einvoice/generating_e_invoice" },
-                { text: "FAQs", link: "/docs/ewaybill-and-einvoice/faqs" }
-            ]
-        },
-        {
-            text: "Purchase Reconciliation",
-            collapsible: true,
-            items: [
-                { text: "Setting Up", link: "/docs/purchase-reconciliation/purchase_reconciliation_setup" },
-                { text: "Reconciling Purchase", link: "/docs/purchase-reconciliation/reconciling_purchase" },
-                { text: "Auto Reconcile", link: "/docs/purchase-reconciliation/auto_reconcile" }
-            ]
-        },
-        {
-            text: "Miscellaneous",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                { text: "Audit Trail", link: "/docs/miscellaneous/audit_trail" },
-                { text: "GSTIN Verification", link: "/docs/miscellaneous/gstin_verification" },
-                { text: "Reports and Returns", link: "/docs/miscellaneous/gst_reports" },
-                { text: "Transaction Validations", link: "/docs/miscellaneous/transaction_validations" },
-                { text: "Lower Deduction Certificate", link: "/docs/miscellaneous/lower_deduction_certificate" },
-            ]
-        },
-        {
-            text: "Developer Guide",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                { text: "Migrating from V13", link: "/docs/developer-guide/migrating-from-v13" },
-                { text: "Migration Guide", link: "/docs/developer-guide/migration-guide" },
-                { text: "Sandbox", link: "/docs/developer-guide/sandbox" },
-                { text: "E-Invoice QR", link: "/docs/developer-guide/e_invoice_qr" },
-            ]
-        },
-
     ];
 }
 
@@ -230,6 +162,40 @@ function sidebarDocsv140x() {
                 { text: "Github User", link: "/docs/v14.0.x/commit/github_user" },
                 { text: "Permission", link: "/docs/v14.0.x/permission/permission" },
                 { text: "Server Down Scenario", link: "/docs/v14.0.x/server-down/server-down" }
+            ]
+        },
+    ];
+}
+
+function sidebarDocsv02x() {
+    return [
+        {
+            text: "Getting Started",
+            collapsible: true,
+            items: [
+                { text: "Introduction", link: "/docs/v0.2.x/getting-started/introduction" },
+                { text: "Authorization", link: "/docs/v0.2.x/getting-started/github_credential" },
+                { text: "Projects and Tasks", link: "/docs/v0.2.x/getting-started/project_and_task" },
+                { text: "Commit", link: "/docs/v0.2.x/getting-started/commit" },
+                { text: "Pull Request", link: "/docs/v0.2.x/getting-started/pull_request" }
+
+            ]
+        },
+        {
+            text: "Github Credential",
+            collapsible: true,
+            items: [
+                { text: "Create Github App", link: "/docs/v0.2.x/github-credential/create_app" },
+            ]
+        },
+        {
+            text: "Extras",
+            collapsible: true,
+            items: [
+                { text: "Custom Task Closing Configuration", link: "/docs/v0.2.x/commit/custom_closing_config" },
+                { text: "Github User", link: "/docs/v0.2.x/commit/github_user" },
+                { text: "Permission", link: "/docs/v0.2.x/permission/permission" },
+                { text: "Server Down Scenario", link: "/docs/v0.2.x/server-down/server-down" }
             ]
         },
     ];

@@ -2,7 +2,7 @@
 
 GitHub Credentials is a doctype designed to facilitate the management of OAuth app credentials related to GitHub apps within an organization. Users can add their own credentials such as client ID and secret, which are then utilized for authorization and webhook creation for organizations to which the user has access.
 
-You must see Creating app guidlines for ERPNext-Projects-Plus. [Create-app](../github-credential/create_app.md)
+You must see Creating app guidlines for ERPNext-Projects-Plus. //video
 
 ## How to Create a GitHub App
 

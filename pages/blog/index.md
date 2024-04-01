@@ -1,9 +1,8 @@
 ---
 layout: home
 title : Blogs
-description: Exploring implementation strategies for India
-og_title: Blogs - India Compliance
-og_url: https://docs.indiacompliance.app/blog/
+description: Smart integration of ERPNext projects with Github
+og_title: Blogs - ERPNext-Projects-Plus
 ---
 
 <Posts/>

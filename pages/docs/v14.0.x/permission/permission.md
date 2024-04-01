@@ -11,25 +11,29 @@ The Project doctype has been customized to include level 1 fields. These fields 
 4. **Margin**
 
 ## Extra Permissions for Specific Doctypes
+<br/>
 
-### Commit
+#### Commit
 - **System Manager:** Read, Delete Permission
 - **Administrator:** Read, Delete Permission
 - **Project Manager:** Read, Delete
 - **Project User:** Read
 - **EPP Member:** Read
+<br/><br/>
 
-### Pull Request
+#### Pull Request
 - **System Manager:** Read, Delete Permission
 - **Administrator:** Read, Delete Permission
 - **Project Manager:** Read, Delete
 - **Project User:** Read
 - **EPP Member:** Read
+<br/><br/>
 
-### Task
+#### Task
 - **EPP Member:** Read, Write, Create
+<br/><br/>
 
-### Project Permissions
+#### Project Permissions
 - **Project User and Project Manager:**
   - Level 1 Field Permissions
 - **EPP Member:**
@@ -37,13 +41,16 @@ The Project doctype has been customized to include level 1 fields. These fields 
   - Sensitivity: Fields marked as Level 1 are considered sensitive and are restricted from view by EPP Members.
 - **All Roles:**
   - Level 2 Field Permissions
+<br/><br/>
 
-### ERPNext-Projects-Plus Settings Permissions
+#### ERPNext-Projects-Plus Settings Permissions
 - **System Manager:** Read, Write, Create, Delete
 - **Administrator:** Read, Write, Create, Delete
+<br/><br/>
 
-### Github Credential Permissions
+#### Github Credential Permissions
 - **System Manager:** Read, Write, Create, Delete
 - **Administrator:** Read, Write, Create, Delete
+<br/><br/>
 
 This documentation outlines the customizations and permissions applied within the Frappe ERPNext environment. It provides clear insight into the roles, permissions, and field-level access for various doctypes and settings.

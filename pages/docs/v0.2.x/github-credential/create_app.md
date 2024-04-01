@@ -22,7 +22,7 @@ GitHub OAuth apps provide a secure way to integrate third-party applications wit
   - **Authorization callback URL**: Enter the callback URL where GitHub will redirect users after authentication.
     ex. 
     ```
-    {hostname}/api/method/erpnext_projects_plus.github.doctype.github_credential.github_credential.github_callback_handler
+    {hostname}/app/github-credential
     ```
 
 - Click "Register application" to create your OAuth app.
